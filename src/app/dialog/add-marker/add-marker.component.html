@@ -1,0 +1,10 @@
+<div mat-dialog-content>
+  <p>Nom de l'appareil</p>
+  <mat-form-field appearance="fill">
+    <input matInput [(ngModel)]="deviceName">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Annuler</button>
+  <button mat-button [mat-dialog-close]="deviceName">Ajouter</button>
+</div>

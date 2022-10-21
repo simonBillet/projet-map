@@ -1,10 +1,11 @@
 .div-main {
   display: flex;
   flex-direction: row;
-
+  height: 100vh;
   .div-side-bar {
     flex-grow: 1;
     padding: 10px;
+    background-color: #0e5488;
     /*display: flex;
     justify-content: center;*/
   }
@@ -26,4 +27,19 @@
 
 #map {
   height: 100%;
+}
+
+.table {
+  width: 90%;
+  text-align: center;
+  margin: 10px 5%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.none {
+  display: none;
 }

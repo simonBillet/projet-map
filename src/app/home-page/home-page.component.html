@@ -2,18 +2,40 @@
   <div class="div-side-bar">
     <h1>Mon APP</h1>
     <div>
-      <p>Mon compte</p>
-    </div>
-    <div>
-      <p>Les interactions possibles</p>
+      <button type="button" name="list-marker" (click)="showListMarker = !showListMarker">Liste des markers</button>
     </div>
   </div>
   <div class="div-body">
-    <p>Voici une carte</p>
-    <div class="map-container">
+    <div [class]="showListMarker? 'none' : ''" class="map-container">
       <div class="map-frame">
         <div id="map"></div>
       </div>
+    </div>
+
+    <div *ngIf="showListMarker" class="list-container">
+      <h1> Liste de tous les markers existants : </h1>
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nom</th>
+          <th>Date</th>
+          <th>Edition</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let device of devices">
+          <td>{{ device.id }}</td>
+          <td>{{ device.name }}</td>
+          <td>{{ device.date.toLocaleString() }}</td>
+          <td>
+            <button (click)="modifierMarker(device)">Modifier</button>
+            <button (click)="supprimerMarker(device)">Supprimer</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
