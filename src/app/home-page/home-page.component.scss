@@ -1,0 +1,29 @@
+.div-main {
+  display: flex;
+  flex-direction: row;
+
+  .div-side-bar {
+    flex-grow: 1;
+    padding: 10px;
+    /*display: flex;
+    justify-content: center;*/
+  }
+
+  .div-body {
+    flex-grow: 10;
+  }
+}
+
+.map-container {
+  margin: 30px;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 600px;
+
+}
+
+#map {
+  height: 100%;
+}
